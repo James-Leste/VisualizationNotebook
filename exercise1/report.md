@@ -92,5 +92,7 @@ Oil in a dangerous climate. (2024, Mar 16). The Economist, 450, 3-3, 4. Retrieve
 
 ### 4.1
 
+Source code: <https://github.com/James-Leste/VisualizationNotebook/blob/main/exercise1/scripts/Penguin.ipynb>
+
 ![alt text](images/Penguin.png)
 *Figure 4.1 Penguin Data Comparison*
