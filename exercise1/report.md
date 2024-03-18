@@ -1,5 +1,8 @@
 # Assignment 1
 
+*Author: Ziqi Wang*
+Student number: 101699682
+
 ## Exercise 1
 
 ### 1.1 Current Issues
@@ -39,9 +42,36 @@
 
 ### 2.3 Lie factor analysis
 
-Both plots don't contain all the dates in the dataset, with only days when one market was overperforming the other. Figure 2.1 only shows a period when Bitcoin was skyrocketing while the Nasdaq remained flat, overesitmating the potential of Bitcoin and giving audience an illusion that Bitcoin is more worth buying.
+Both plots don't contain all the dates in the dataset, with only days when one market was overperforming the other.
 
-Figure 2.2 only shows a period when Bitcoin was fluctuating drastically while the Nasdaq index was growing slowing but steadily, underesitmating the future potential of Bitcoin.
+Figure 2.1 only shows a period (12/09/2022 - 02/13/2024) when Bitcoin was skyrocketing while the Nasdaq remained flat. According to the lie factors, the plot overesitmate the potential of Bitcoin and giving audience an illusion that Bitcoin is more worth buying.
+
+```python
+IncreaseRateInImageBitcoin = (49406.6-17156.1)/431 = 74.8 USD per day
+IncreaseRateInImageNasdaq = (17600.42 - 11563.33)/431 = 14.0 USD per day
+
+ActualIncrease = (49406.6 - 3865.9)/1803 = 25.2 USD per day
+ActuralIncrease = (17600.42 - 7015.69)/1803 = 5.9 USD
+per day
+
+BitcoinLieFactor = IncreaseRateInImageBitcoin/ActualIncrease = 3
+NasdaqLiefactor = IncreaseRateInImageNasdaq/ActuralIncrease = 2.4
+```
+
+Figure 2.2 only shows a period (03/08/2019 - 12/02/2019) when Bitcoin was fluctuating drastically while the Nasdaq index was growing slowing but steadily. According to the lie factors, the plot mainly underesitmate the future potential of Bitcoin.
+
+```python
+IncreaseRateInImageBitcoin = (7299.3-3865.9)/270 = 12.7 USD per day
+IncreaseRateInImageNasdaq = (8309.26 - 7015.69)/270 = 4.8 USD per day
+
+ActualIncrease = (49406.6 - 3865.9)/1803 = 25.2 USD per day
+ActuralIncrease = (17600.42 - 7015.69)/1803 = 5.9 USD
+per day
+
+
+BitcoinLieFactor = IncreaseRateInImageBitcoin/ActualIncrease = 0.5
+NasdaqLiefactor = IncreaseRateInImageNasdaq/ActuralIncrease = 0.8
+```
 
 ### 2.4 Fair plot
 
