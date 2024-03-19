@@ -38,7 +38,7 @@ Student number: 101699682
 ### 2.2 The Nasdaq has been better than Bitcoin
 
 ![alt text](images/Nasdaq_over_Bitcoin2.png)
-*Figure 2.2 A plot where the Nasdaq index is steadier than Bitcoin*
+*Figure 2.2 Nasdaq VS Bitcoin with different scales 2019-2024*
 
 ### 2.3 Lie factor analysis
 
