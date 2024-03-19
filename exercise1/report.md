@@ -37,40 +37,39 @@ Student number: 101699682
 
 ### 2.2 The Nasdaq has been better than Bitcoin
 
-![alt text](images/Nasdaq_over_Bitcoin.png)
+![alt text](images/Nasdaq_over_Bitcoin2.png)
 *Figure 2.2 A plot where the Nasdaq index is steadier than Bitcoin*
 
 ### 2.3 Lie factor analysis
 
 Both plots don't contain all the dates in the dataset, with only days when one market was overperforming the other.
 
-Figure 2.1 only shows a period (12/09/2022 - 02/13/2024) when Bitcoin was skyrocketing while the Nasdaq remained flat. According to the lie factors, the plot overesitmate the potential of Bitcoin and giving audience an illusion that Bitcoin is more worth buying.
+Figure 2.1 only shows a period (12/09/2022 - 02/13/2024) when Bitcoin was skyrocketing while the Nasdaq remained flat. According to the lie factors, the plot overesitmates the potential of Bitcoin and giving audience an illusion that Bitcoin is more worth buying.
+
 
 ```python
 IncreaseRateInImageBitcoin = (49406.6-17156.1)/431 = 74.8 USD per day
 IncreaseRateInImageNasdaq = (17600.42 - 11563.33)/431 = 14.0 USD per day
 
-ActualIncrease = (49406.6 - 3865.9)/1803 = 25.2 USD per day
-ActuralIncrease = (17600.42 - 7015.69)/1803 = 5.9 USD
+ActualIncreaseBitcoin = (49406.6 - 3865.9)/1803 = 25.2 USD per day
+ActuralIncreaseNasdaq = (17600.42 - 7015.69)/1803 = 5.9 USD
 per day
 
-BitcoinLieFactor = IncreaseRateInImageBitcoin/ActualIncrease = 3
-NasdaqLiefactor = IncreaseRateInImageNasdaq/ActuralIncrease = 2.4
+BitcoinLieFactor = IncreaseRateInImageBitcoin/ActualIncreaseBitcoin = 3
+NasdaqLiefactor = IncreaseRateInImageNasdaq/ActuralIncreaseNasdaq = 2.4
 ```
 
-Figure 2.2 only shows a period (03/08/2019 - 12/02/2019) when Bitcoin was fluctuating drastically while the Nasdaq index was growing slowing but steadily. According to the lie factors, the plot mainly underesitmate the future potential of Bitcoin.
+In figure 2.2, a dual y-axis approach to visually compare the Nasdaq and Bitcoin performances is used, making adjustments to present the Nasdaq in a more favorable light. The Nasdaq is plotted on the left y-axis, and Bitcoin is on the right y-axis, each scaled independently to enhance the visual comparison.
+
+The `NasdaqPlotCurve` is the curve of the nasdaq plot using the scaled axis
+The `ActualCurve` is the curve of the nasdaq plot using the same axis as Bitcoin.
+The lie factor shows that the plot is exaggrating the increase rate of Nasdaq.
 
 ```python
-IncreaseRateInImageBitcoin = (7299.3-3865.9)/270 = 12.7 USD per day
-IncreaseRateInImageNasdaq = (8309.26 - 7015.69)/270 = 4.8 USD per day
+NasdaqPlotCurve = 154/318 = 0.48
+ActualCurve = 16/318 = 0.05
 
-ActualIncrease = (49406.6 - 3865.9)/1803 = 25.2 USD per day
-ActuralIncrease = (17600.42 - 7015.69)/1803 = 5.9 USD
-per day
-
-
-BitcoinLieFactor = IncreaseRateInImageBitcoin/ActualIncrease = 0.5
-NasdaqLiefactor = IncreaseRateInImageNasdaq/ActuralIncrease = 0.8
+Lie factor = NasdaqPlotCurve/ActualCurve = 0.48/0.05 = 9.6
 ```
 
 ### 2.4 Fair plot
@@ -93,7 +92,7 @@ Future improvement
 **Labels and Annotation**: Place labels directly next to the lines they describe, which avoids the need for a legend and reduces the cognitive load required to match colors to labels.
 **Data-Dense**: Jorma could present more information in the same space. For example, adding markers for significant events could provide context for price changes.
 **Color**: Use colors effectively to help distinguish data without distracting. Stick to a colorblind-friendly palette, in case Jorma’s blog has colorblind readers.
-Avoid Chartjunk: No 3D or unnecessary decorative elements that don’t add informational value.
+
 **Comparison**: Provide clear means for comparison, such as starting both Bitcoin and Nasdaq at 100% and plotting their relative change.
 
 ## Exercise 3
