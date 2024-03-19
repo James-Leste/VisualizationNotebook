@@ -46,7 +46,6 @@ Both plots don't contain all the dates in the dataset, with only days when one m
 
 Figure 2.1 only shows a period (12/09/2022 - 02/13/2024) when Bitcoin was skyrocketing while the Nasdaq remained flat. According to the lie factors, the plot overesitmates the potential of Bitcoin and giving audience an illusion that Bitcoin is more worth buying.
 
-
 ```python
 IncreaseRateInImageBitcoin = (49406.6-17156.1)/431 = 74.8 USD per day
 IncreaseRateInImageNasdaq = (17600.42 - 11563.33)/431 = 14.0 USD per day
